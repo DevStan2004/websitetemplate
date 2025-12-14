@@ -1,7 +1,7 @@
 'use client'
 import React, {useState} from 'react'
 import Image from 'next/image'
-import logo from '@/images/logo.png'
+import logo from '@/images/churchlogo.png'
 import { MapPin, Mail, Phone, Search, Facebook, Twitter, Instagram, Menu, X } from 'lucide-react'
 import Wrapper from './Wrapper'
 import Link from 'next/link'

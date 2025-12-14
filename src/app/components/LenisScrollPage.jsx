@@ -57,13 +57,9 @@ const LenisScrollPage = () => {
         <Hero />
         <About />
         <Services />
-        <Contact />
         <WorkingProcess />
         <Projects />
-        <Pricing />
         <Testimonials />
-        <Blog />
-        <SubFooter />
     </>
   )
 }

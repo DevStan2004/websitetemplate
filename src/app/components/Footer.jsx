@@ -1,7 +1,7 @@
 import React from 'react'
 import Wrapper from './Wrapper'
 import Image from 'next/image'
-import logo from '@/images/logo.png'
+import logo from '@/images/churchlogo.png'
 import footerBackground from '@/images/footerBackground.png'
 import { Clock, Facebook, Instagram, LocationEdit, LocationEditIcon, Mail, MapPinIcon, Phone, Send, Twitter } from 'lucide-react'
 import Link from 'next/link'
@@ -14,7 +14,7 @@ const Footer = () => {
         <div className={'grid md:grid-cols-4 grid-cols-1 py-20 relative gap-10'} >
             <div className="flex flex-col space-y-3 relative">
                 <Image src={logo} alt='logo' width={1000} height={1000} className='w-20' />
-                <h1 className='font-bold text-purple-900 text-3xl'>Nectarlite Technology</h1>
+                <h1 className='font-bold text-purple-900 text-3xl'>Church of Nigeria</h1>
                 <p className="font-light">Elevating your business with cutting-edge technology and reliable digital platforms.</p>
                 <div className="flex gap-3 items-center">
                     <div className="w-12 h-12 flex justify-center hover:bg-purple-900 transition-all duration-500 ease-in-out cursor-pointer group items-center rounded-full bg-white">

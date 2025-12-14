@@ -1,12 +1,12 @@
 import React from 'react'
-import aboutBackground from '@/images/aboutBackground.png'
+import aboutBackground from '@/images/banner2.jpeg'
 import Wrapper from './Wrapper'
 import Link from 'next/link'
 
 const AboutHero = () => {
   return (
     <div className='h-[25rem] flex justify-center items-center flex-col gap-3' style={{
-        backgroundImage: `url(${aboutBackground.src})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.8)),url(${aboutBackground.src})`,
         backgroundSize: 'cover', 
         backgroundPosition: 'center'
     }}>

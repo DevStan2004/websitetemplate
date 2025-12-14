@@ -10,7 +10,7 @@ const TestimonialCard = ({quote, name, title, desc, src}) => {
         </div>
         <div className="text-center">{desc}</div>
         <div className="flex flex-col space-y-5 items-center translate-y-5">
-            <Image src={src} alt={name} width={1000} height={1000} className='w-20 rounded-full ' />
+            <Image src={src} alt={name} width={1000} height={1000} className='w-20 h-20 object-cover rounded-full ' />
             <p className="font-semibold text-black text-2xl">{name}</p>
             <span className='text-[#686868]'>
                 {title}

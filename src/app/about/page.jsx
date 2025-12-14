@@ -14,7 +14,6 @@ const page = () => {
       <AboutUs />
       <Meet />
       <AboutWorkingProcess />
-      <AboutPricing />
       <AboutContact />
     </>
   )

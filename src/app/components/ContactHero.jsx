@@ -1,12 +1,12 @@
 import React from 'react'
-import contactPageBackground from '@/images/contactPageBackground.png'
+import contactPageBackground from '@/images/banner.jpeg'
 import Wrapper from './Wrapper'
 import Link from 'next/link'
 
 const ContactHero = () => {
   return (
     <div className='h-[25rem] flex justify-center items-center flex-col gap-3' style={{
-        backgroundImage: `url(${contactPageBackground.src})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.8)),url(${contactPageBackground.src})`,
         backgroundSize: 'cover', 
         backgroundPosition: 'center'
     }}>

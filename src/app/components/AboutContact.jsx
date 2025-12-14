@@ -14,7 +14,7 @@ const AboutContact = () => {
             <div className="flex justify-center items-center px-10 py-2 rounded-full bg-[#b576b3]">
                 <p className="font-light text-white">CONTACT</p>
             </div>
-            <h6 className="text-4xl text-center font-bold text-white">Request A Free Consultation</h6>
+            <h6 className="text-4xl text-center font-bold text-white">For More Information</h6>
         </div>
         <div className="grid md:grid-cols-2 grid-cols-1 md:h-[35rem] md:translate-y-40 translate-y-20" style={{
             clipPath: 'polygon(0% 0%, 100% 1.25%, 100% 98.75%, 0% 97.75%)'

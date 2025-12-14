@@ -2,34 +2,34 @@ import React from 'react'
 import Wrapper from './Wrapper'
 import Card from './Card'
 import quoteIcon from '@/images/quoteIcon.png'
-import jorina from '@/images/jorina.png'
-import richard from '@/images/richard.png'
-import mike from '@/images/mike.png'
-import monty from '@/images/monty.png'
-import rashid from '@/images/rashid.png'
+import jorina from '@/images/picture1.jpeg'
+import richard from '@/images/picture2.jpeg'
+import mike from '@/images/picture3.jpeg'
+import monty from '@/images/picture4.jpeg'
+import rashid from '@/images/picture5.jpeg'
 import AnimatedSlide from './AnimatedSlide'
 import TestimonialCard from './TestimonialCard'
 
 const Testimonials = () => {
     const cardDetails = [
         {
-            name: 'Abdur Rashid',
-            title: 'CEO, Keen IT Solution',
-            desc: 'Capitalize on low handing fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway.',
+            name: 'Most Rev. Dr. Henry Ndukuba',
+            title: 'Primate, Church of Nigeria',
+            desc: 'The Church of Nigeria stands as a beacon of hope and transformation across our nation. Through faithful preaching of the Word and Holy Spirit empowerment, we are witnessing a great revival that will impact generations to come.',
             quote: quoteIcon,
             image: rashid
         },
         {
-            name: 'Monty Moni',
-            title: 'CEO, Keen IT Solution',
-            desc: 'Capitalize on low handing fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway.',
+            name: 'RT. Rev. Dr. Ezekiel Azubuike',
+            title: 'Bishop, Abuja Diocese',
+            desc: 'God is doing marvelous things through the ministries of Church of Nigeria. Our youth programs, church planting initiatives, and community outreach are bearing abundant fruit for His kingdom.',
             quote: quoteIcon,
             image: monty
         },
         {
-            name: 'Mike Hotten',
-            title: 'CEO, Brick Solution',
-            desc: 'Capitalize on low handing fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway.',
+            name: 'Rev. Canon Chidi Okoroafor',
+            title: 'Rector, Cathedral Church',
+            desc: 'The Anglican tradition combined with Pentecostal fire has created a powerful movement. Families are being strengthened, souls are being saved, and Nigeria is being transformed by the Gospel.',
             quote: quoteIcon,
             image: mike
         },
@@ -49,10 +49,10 @@ const Testimonials = () => {
         },
     ]
   return (
-    <Wrapper className={'py-30 pb-50 bg-[#f6f7f9]'}>
+    <Wrapper className={'py-30 mt-50 pb-50 bg-[#f6f7f9]'}>
         <div className="flex flex-col space-y-3 items-center">
-            <p className="text-purple-900 font-light">Testimonials</p>
-            <h3 className='text-4xl text-center font-bold'>What Saying Our Customers</h3>
+            <p className="text-purple-900 font-light">Testimonies of Fath</p>
+            <h3 className='text-4xl text-center font-bold'>Voices from our own Church Family</h3>
             <AnimatedSlide />
         </div>
         <div className="flex gap-10 my-5">

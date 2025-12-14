@@ -16,24 +16,6 @@ gsap.registerPlugin(ScrollTrigger);
 const About = () => {
     const counterRef = useRef();
     const isInView = useInView(counterRef, { once: false, amount: 0.5 })
-    const technologies = [
-        {
-            name: "Software Development",
-            skillAmount: 92
-        },
-        {
-            name: "Cyber Security",
-            skillAmount: 80
-        },
-        {
-            name: "Artificial Intelligence",
-            skillAmount: 95
-        },
-        {
-            name: "Web Development",
-            skillAmount: 78
-        }
-    ]
 
     useGSAP(() => {
         gsap.to('.animate-image', {
@@ -83,41 +65,10 @@ const About = () => {
                 <p className="text-blue-900 font-light text-sm">ABOUT US</p>
             </div>
             <h2 className="font-bold text-black text-4xl leading-12">
-                We Are Increasing Business Success With Technology
+                We Are Advancing God's Kingdom Through Faith
             </h2>
-            <p className="text-[#454545] text-lg">Over 25 years working in IT services developing software applications and mobile apps for clients all over the world.</p>
+            <p className="text-[#454545] text-lg">Welcome to the Church of Nigeria, a vibrant Anglican communion rooted in the rich heritage of the Church of England and passionately committed to the Great Commission. Established in 1979, we are the largest Anglican province in the world, with over 18 million members across 164 dioceses, proclaiming the Gospel of Jesus Christ through worship, evangelism, and service.</p>
             <div className="flex flex-col space-y-5 w-full items-start">
-                {technologies.map((technology, index) => (    
-                    <div key={index} className="flex w-full flex-col space-y-3">
-                        <div className="flex justify-between">
-                            <p className="text-sm">{technology.name}</p>
-                            <p ref={counterRef} className='font-bold'>
-                                <CountUp start={0} key={isInView ? 'in' : 'out'} suffix='%' end={technology.skillAmount} duration={2.5} />
-                            </p>
-                        </div>
-                        <div className="w-full rounded-sm overflow-hidden" style={{
-                            backgroundColor: 'rgb(108,33,166, 0.3)',
-                        }}>
-                            <motion.div style={{
-                                backgroundImage: 'linear-gradient(to right, rgb(95,26,147), rgb(108,33,166))',
-                                width: `${technology.skillAmount}%`,
-                                height: '7px',
-                                backgroundSize: '15px 15px', 
-                            }}
-                                initial={{
-                                    width: 0,
-                                }}
-                                whileInView={{
-                                    width: `${technology.skillAmount}%`, 
-                                    transition: {
-                                        duration: 1.5, 
-                                        ease: 'easeInOut',
-                                    }
-                                }}
-                            ></motion.div>
-                        </div>
-                    </div>
-                ))}
                 <Button text={'Learn More'} className={'rounded-4xl px-10 font-semibold py-4 my-5'} />
             </div>
         </div>
