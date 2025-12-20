@@ -31,7 +31,7 @@ const Meet = () => {
             <div className="flex flex-col gap-5 items-center">
               <div className="flex justify-center items-center text-white bg-[#b576b342] font-light px-8 py-2 rounded-full">TEAM</div>
               <h3 className="font-bold text-white text-4xl text-center">
-                Meet With IT Experts
+                Meet With IT Unit
               </h3>
             </div>
             <div className="grid md:grid-cols-3 gris-cols-1 md:gap-20 justify-items-center">

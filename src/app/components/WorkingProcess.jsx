@@ -1,6 +1,6 @@
 import React from 'react'
 import Wrapper from './Wrapper'
-import churchImage from '@/images/picture8.jpeg' // Replace with appropriate church image
+import churchImage from '@/images/picture17.jpeg' // Replace with appropriate church image
 import Button from './Button'
 
 const WorkingProcess = () => {

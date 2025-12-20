@@ -2,9 +2,9 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import Wrapper from './Wrapper'
-import aboutImage1 from '@/images/aboutImage1.png'
-import aboutImage2 from '@/images/aboutImage2.png'
-import aboutImage3 from '@/images/aboutImage3.png'
+import picture9 from '@/images/picture9.jpeg'
+import picture10 from '@/images/picture10.jpeg'
+import picture11 from '@/images/picture11.jpeg'
 import Button from './Button'
 import { motion, useInView } from 'framer-motion'
 import CountUp from 'react-countup'
@@ -51,10 +51,10 @@ const About = () => {
                     }
                 }}
             >    
-            <Image src={aboutImage1} width={1000} height={1000} alt='about image 1' className='w-full' />
+            <Image src={picture9} width={1000} height={1000} alt='about image 1' className='w-full' />
             </motion.div>
-            <Image src={aboutImage2} width={1000} height={1000} alt='about image 2' className='md:w-[40%] w-[70%] absolute md:-left-20 -left-10 md:-top-1 -top-20 -translate-y-200 translate-x-200 opacity-0 animate-image' />
-            <Image src={aboutImage3} width={1000} height={1000} alt='about image 3' className='md:w-[60%] w-[80%] absolute md:-bottom-10 -bottom-20 md:-left-18 -translate-y-250 translate-x-200 opacity-0 animate-image' />
+            <Image src={picture10} width={1000} height={1000} alt='about image 2' className='md:w-[40%] w-[70%] absolute md:-left-20 -left-10 md:-top-1 -top-20 -translate-y-200 translate-x-200 opacity-0 animate-image' />
+            <Image src={picture11} width={1000} height={1000} alt='about image 3' className='md:w-[12rem] w-[80%] absolute md:-bottom-10 -bottom-20 md:-left-18 -translate-y-250 translate-x-200 opacity-0 animate-image' />
         </div>
         <div className="flex md:mt-0 flex-col space-y-5 mt-20 items-start">
             <div className="flex space-x-8 items-center">
