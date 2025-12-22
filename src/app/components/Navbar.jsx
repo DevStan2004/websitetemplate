@@ -56,6 +56,7 @@ const Navbar = () => {
                         <li className='text-white font-bold'><Link href=''>Pages</Link></li>
                         <li className='text-white font-bold'><Link href=''>Blog</Link></li> */}
                         <li className='text-white font-bold'><Link href='/contact'>Contact</Link></li>
+                        <li className='text-white font-bold'><Link href='/gallery'>Gallery</Link></li>
                     </ul>
                     <div className="flex items-center space-x-5">
                         <Search size={20} strokeWidth={1} color='white' />
