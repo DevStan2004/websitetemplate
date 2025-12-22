@@ -5,6 +5,7 @@ import logo from '@/images/churchlogo.png'
 import { MapPin, Mail, Phone, Search, Facebook, Twitter, Instagram, Menu, X } from 'lucide-react'
 import Wrapper from './Wrapper'
 import Link from 'next/link'
+import Button from './Button'
 
 const Navbar = () => {
     const [active, setActive] = useState(false);
@@ -64,6 +65,9 @@ const Navbar = () => {
                         <Facebook size={20} strokeWidth={1} color='white' />
                         <Twitter size={20} strokeWidth={1} color='white' />
                         <Instagram size={20} strokeWidth={1} color='white' />
+                        <li className='text-white font-bold flex-shrink-0 cursor-pointer'><Link href='/donate'>
+                            <Button className={'py-2 px-10 rounded-full cursor-pointer shadow'} text={'Donate'} />
+                        </Link></li>
                     </div>
                 </Wrapper>
             </div>
@@ -114,6 +118,9 @@ const Navbar = () => {
                             </div>
                         </div>
                     </Wrapper>
+                    <li className='text-white font-bold flex-shrink-0 cursor-pointer my-5 w-full'><Link href='/donate'>
+                        <Button className={'py-2 px-10 rounded-full cursor-pointer shadow w-full'} text={'Donate'} />
+                    </Link></li>
                 </Wrapper>
             </div>
         </header>
