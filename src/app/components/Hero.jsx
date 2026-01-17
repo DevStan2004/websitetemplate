@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useRef } from 'react'
-import banner from '@/images/banner.jpeg'
+import banner from '@/images/priest.jpeg'
 import Wrapper from './Wrapper'
 import Button from './Button'
 import PlayAnimation from './PlayAnimation'
@@ -16,6 +16,7 @@ const Hero = () => {
         backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(${banner.src})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        backgroundPosition: 'center',
         clipPath: 'polygon(100% 85.21%, 100% 0%, 0% 0%, 0% 85.21%, 50% 100%)'
     }}>
         <Wrapper className={'py-30 grid md:grid-cols-2 grid-cols-1 items-center'}>
