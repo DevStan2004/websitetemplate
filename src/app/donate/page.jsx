@@ -16,13 +16,18 @@ const page = () => {
   const [copied, setCopied] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('Tithe');
 
-  const churchBankDetails = {
-    bankName: "First National Bank",
-    accountName: "Grace Community Sanctuary",
-    accountNumber: "0123456789",
-    sortCode: "20-40-60",
-    reference: "Offering"
-  };
+  const churchBankDetails = [
+    {
+      bankName: "Zenith Bank",
+      accountName: "Diocese of Kalabari",
+      accountNumber: "1012093752",
+    }, 
+    {
+      bankName: "Zenith Bank",
+      accountName: "Diocese of Kalabari Synod",
+      accountNumber: "1311629164",
+    }, 
+  ];
 
   const copyToClipboard = () => {
     // Standard clipboard fallback as per environment instructions
@@ -69,45 +74,36 @@ const page = () => {
             <p className="text-stone-600 mb-8">
               You can give your tithes and offerings directly through your bank app using the details below.
             </p>
-
-            <div className="bg-white border border-stone-200 rounded-2xl p-8 shadow-sm space-y-6">
-              <div className="space-y-1">
-                <p className="text-xs uppercase tracking-widest text-stone-400 font-bold">Bank Name</p>
-                <p className="text-lg font-medium">{churchBankDetails.bankName}</p>
-              </div>
-              
-              <div className="space-y-1">
-                <p className="text-xs uppercase tracking-widest text-stone-400 font-bold">Account Name</p>
-                <p className="text-lg font-medium">{churchBankDetails.accountName}</p>
-              </div>
-
-              <div className="space-y-1 relative group">
-                <p className="text-xs uppercase tracking-widest text-stone-400 font-bold">Account Number</p>
-                <div className="flex items-center justify-between bg-stone-50 p-4 rounded-xl border border-stone-100 mt-2">
-                  <span className="text-2xl font-mono tracking-tighter text-stone-800">
-                    {churchBankDetails.accountNumber}
-                  </span>
-                  <button 
-                    onClick={copyToClipboard}
-                    className="flex items-center gap-2 bg-stone-900 text-white px-4 py-2 rounded-lg hover:bg-stone-700 transition-all active:scale-95"
-                  >
-                    {copied ? <Check size={18} /> : <Copy size={18} />}
-                    <span className="text-sm font-medium">{copied ? 'Copied' : 'Copy'}</span>
-                  </button>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
+            {churchBankDetails.map((detail, index) => (
+              <div key={index} className="bg-white border border-stone-200 rounded-2xl p-8 shadow-sm space-y-6 mt-5">
                 <div className="space-y-1">
-                  <p className="text-xs uppercase tracking-widest text-stone-400 font-bold">Sort Code</p>
-                  <p className="text-lg font-medium">{churchBankDetails.sortCode}</p>
+                  <p className="text-xs uppercase tracking-widest text-stone-400 font-bold">Bank Name</p>
+                  <p className="text-lg font-medium">{detail.bankName}</p>
                 </div>
-                <div className="space-y-1 text-right">
-                  <p className="text-xs uppercase tracking-widest text-stone-400 font-bold">Suggested Ref</p>
-                  <p className="text-lg font-medium italic text-orange-600">"{selectedCategory}"</p>
+                
+                <div className="space-y-1">
+                  <p className="text-xs uppercase tracking-widest text-stone-400 font-bold">Account Name</p>
+                  <p className="text-lg font-medium">{detail.accountName}</p>
+                </div>
+
+                <div className="space-y-1 relative group">
+                  <p className="text-xs uppercase tracking-widest text-stone-400 font-bold">Account Number</p>
+                  <div className="flex items-center justify-between bg-stone-50 p-4 rounded-xl border border-stone-100 mt-2">
+                    <span className="text-2xl font-mono tracking-tighter text-stone-800">
+                      {detail.accountNumber}
+                    </span>
+                    <button 
+                      onClick={copyToClipboard}
+                      className="flex items-center gap-2 bg-stone-900 text-white px-4 py-2 rounded-lg hover:bg-stone-700 transition-all active:scale-95"
+                    >
+                      {copied ? <Check size={18} /> : <Copy size={18} />}
+                      <span className="text-sm font-medium">{copied ? 'Copied' : 'Copy'}</span>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
+
           </div>
 
           <div className="bg-orange-50 rounded-xl p-6 border border-orange-100 flex gap-4">

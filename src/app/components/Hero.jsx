@@ -1,25 +1,54 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
-import banner from '@/images/priest.jpeg'
+import React, { useEffect, useRef, useState } from 'react'
+import priest from '@/images/priest.jpeg'
+import banner from '@/images/banner1.jpeg'
 import Wrapper from './Wrapper'
 import Button from './Button'
 import PlayAnimation from './PlayAnimation'
 import { useGSAP } from '@gsap/react'
 import { SplitText } from 'gsap/all'
 import gsap from 'gsap'
+import { cn } from '../lib/utils'
 gsap.registerPlugin(SplitText);
+
+const IMAGES = [
+    {
+        image: banner,
+    },
+    {
+        image: priest,
+    },
+]
 
 const Hero = () => {
     const textRef = useRef()
+    const carouselRef = useRef([]);
+    const [activeIndex, setActiveIndex] = useState(0)
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if(activeIndex < IMAGES.length - 1) {
+                setActiveIndex(activeIndex + 1)
+            } else {
+                setActiveIndex(activeIndex - 1)
+            }
+        }, 3000)
+        return () => {
+            clearInterval(interval)
+        }
+    }, [activeIndex])
   return (
-    <div className='h-auto' style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(${banner.src})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+    <div className='h-auto relative' style={{
         clipPath: 'polygon(100% 85.21%, 100% 0%, 0% 0%, 0% 85.21%, 50% 100%)'
     }}>
-        <Wrapper className={'py-30 grid md:grid-cols-2 grid-cols-1 items-center'}>
+        {IMAGES.map(({image}, index) => (
+            <div key={index} ref={(el) => {carouselRef.current[index] = el}} className={cn("w-full h-full absolute left-0 top-0", `${activeIndex === index ? 'opacity-100 transition-opacity duration-500' : 'opacity-0 transition-opacity duration-500 delay-100'}`)} style={{    
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(${image.src})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }} />
+        ))}
+        <Wrapper className={'py-30 grid md:grid-cols-2 grid-cols-1 items-center relative'}>
             <div className="flex flex-col space-y-5">
                 <h1 ref={textRef} className='font-bold text-white md:text-5xl text-3xl md:leading-15'>Church of Nigeria</h1>
                 <h1 ref={textRef} className='font-bold text-white md:text-5xl text-3xl md:leading-15'>Love Jesus <br /> Love Like Jesus</h1>
