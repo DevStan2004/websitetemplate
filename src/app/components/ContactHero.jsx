@@ -10,7 +10,7 @@ const ContactHero = () => {
         backgroundSize: 'cover', 
         backgroundPosition: 'center'
     }}>
-        <h1 className='text-5xl font-bold text-white'>About</h1>
+        <h1 className='text-5xl font-bold text-white'>Contact Us</h1>
         <div className="flex items-center gap-3 text-white font-light text-sm">
             <Link href="/">Home</Link>
             <span>/</span>
