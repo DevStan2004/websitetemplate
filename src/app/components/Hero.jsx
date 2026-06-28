@@ -37,7 +37,7 @@ const Hero = () => {
         }
     }, [activeIndex])
   return (
-    <div className='h-auto relative' style={{
+    <div className='h-screen relative' style={{
         clipPath: 'polygon(100% 85.21%, 100% 0%, 0% 0%, 0% 85.21%, 50% 100%)'
     }}>
         {IMAGES.map(({image}, index) => (
@@ -48,27 +48,19 @@ const Hero = () => {
                 backgroundPosition: 'center',
             }} />
         ))}
-        <Wrapper className={'py-30 grid md:grid-cols-2 grid-cols-1 items-center relative'}>
-            <div className="flex flex-col space-y-5">
-                <h1 ref={textRef} className='font-bold text-white md:text-5xl text-3xl md:leading-15'>Church of Nigeria</h1>
-                <h1 ref={textRef} className='font-bold text-white md:text-5xl text-3xl md:leading-15'>Love Jesus <br /> Love Like Jesus</h1>
-                <p className='text-white text-xl split-word'>For the first time ever, Church of Nigeria will offer SIX Christmas Eve services! We're looking forward to these two days of celebrating the Newborn King with you and your guests. Click the link to plan your Christmas!</p>
-                <PlayAnimation />
-            </div>
-            <div className="p-10 rounded-2xl flex flex-col space-y-5 bg-white md:w-[70%] ms-auto w-full md:my-0 my-5">
-                <span className="font-bold text-black text-2xl">Schedule Your Appointment</span>
-                <p className="font-light">
-                    We here to help you 24/7 with experts
-                </p>
-                <form action="" className='flex flex-col space-y-5 relative'>
-                    <input id='name' type='text' placeholder='Name' className="bg-[#f6f7f9] p-4 w-full rounded-lg outline-none border-none" />
-                    <input id='email' type='email' placeholder='Email' className="bg-[#f6f7f9] p-4 w-full rounded-lg outline-none border-none" />
-                    <input id='phone' type='tel' placeholder='Phone' className="bg-[#f6f7f9] p-4 w-full rounded-lg outline-none border-none" />
-                    <input id='age' type='age' placeholder='Age' className="bg-[#f6f7f9] p-4 w-full rounded-lg outline-none border-none" />
-                    <Button text={'Submit Now'} className={'w-full rounded-sm font-semibold p-5'} />
-                </form>
+        <Wrapper className={'py-30 relative text-center'}>
+            <div className="flex flex-col space-y-5 items-center">
+                <h1 ref={textRef} className='font-bold text-white md:text-8xl text-4xl md:leading-15 leading-5'>Church of Nigeria</h1>
+                <h2 className='font-bold text-white md:text-6xl text-2xl md:leading-15'>(ANGLICAN COMMUNION)</h2>
+                <div className='text-white text-3xl split-word'>Dioces of Kalabari</div>
             </div>
         </Wrapper>
+        <div className="absolute md:bottom-15 bo md:left-5 flex flex-col bg-white md:rotate-8 md:w-[40%] w-full">
+            <h3 className='md:text-5xl text-3xl font-bold p-5 text-center'>WELCOME TO CHURCH</h3>
+            <div className="bg-black text-white p-3">
+                <p>We the Bishop of Diocese of Akoko (Anglican Communion) welcome you to this Official Website.</p>
+            </div>
+        </div>
     </div>
   )
 }
