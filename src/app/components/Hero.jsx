@@ -52,12 +52,14 @@ const Hero = () => {
             <div className="flex flex-col space-y-5 items-center">
                 <h1 ref={textRef} className='font-bold text-white md:text-8xl text-4xl md:leading-15 leading-5'>Church of Nigeria</h1>
                 <h2 className='font-bold text-white md:text-6xl text-2xl md:leading-15'>(ANGLICAN COMMUNION)</h2>
-                <div className='text-white text-3xl split-word'>Dioces of Kalabari</div>
+                <div className='text-white text-3xl split-word md:leading-3'>Dioces of Kalabari</div>
+                <div className='text-white text-3xl split-word md:leading-3'>(Mission & Evangelism)</div>
+                <div className='text-white text-3xl split-word md:leading-3'>(Diocese Farm Project)</div>
             </div>
         </Wrapper>
         <div className="absolute md:bottom-15 bo md:left-5 flex flex-col bg-white md:rotate-8 md:w-[40%] w-full">
-            <h3 className='md:text-5xl text-3xl font-bold p-5 text-center'>WELCOME TO CHURCH</h3>
-            <div className="bg-black text-white p-3">
+            <h3 className='md:text-4xl text-3xl font-bold p-5 text-center'>WELCOME TO CHURCH</h3>
+            <div className="bg-purple-900 text-white p-3">
                 <p>We the Bishop of Diocese of Akoko (Anglican Communion) welcome you to this Official Website.</p>
             </div>
         </div>

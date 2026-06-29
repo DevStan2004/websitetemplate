@@ -27,6 +27,16 @@ const page = () => {
       accountName: "Diocese of Kalabari Synod",
       accountNumber: "1311629164",
     }, 
+    {
+      bankName: "Zenith Bank",
+      accountName: "Sunday School Conference Support",
+      accountNumber: "1311629164",
+    }, 
+    {
+      bankName: "Zenith Bank",
+      accountName: "Alms Box",
+      accountNumber: "1311629164",
+    }, 
   ];
 
   const copyToClipboard = () => {
